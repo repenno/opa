@@ -94,8 +94,5 @@ func readCertFromFile(localCertFile string) ([]byte, error) {
 func readKeyFromFile(localKeyFile string) ([]byte, error) {
 	// Read in the cert file
 	key, err := ioutil.ReadFile(localKeyFile)
-	if err != nil {
-		return nil, err
-	}
-	return key, nil
+	return key, err
 }
